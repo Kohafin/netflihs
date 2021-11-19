@@ -16,7 +16,6 @@ export const updateData = type => data => ({
 });
 
 // Replaces all data of "type" with normalized response
-// Replaces all data of "type" with normalized response
 export const replaceNormalizedData = type => data => ({
   type: REPLACE_DATA,
   payload: {
