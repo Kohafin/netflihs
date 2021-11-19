@@ -46,17 +46,12 @@ const sections = {
     },
 }
 
-const preProcess = data => {
-    return data.results
-}
-
 export const getMovies = (section) => ({
     type: API,
     payload: {
         url: sections[section].url,
         success: replaceNormalizedData(section),
-        preProcess,
-        normalize: [sections[section].schema],
+        normalize: {results: [sections[section].schema]},
         name: 'get ' + section,
     },
 });
