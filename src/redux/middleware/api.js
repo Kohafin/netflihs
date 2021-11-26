@@ -36,8 +36,6 @@ const api = ({ dispatch, getState }) => next => action => {
         toastr, // Automatically display toastr on success and error
     } = action.payload;
 
-    const state = getState()
-
     const handleSuccess = data => {
         try{
             if (preProcess) {
