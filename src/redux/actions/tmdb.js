@@ -1,4 +1,4 @@
-import { API } from '../constants';
+import {API, GET_MOVIE} from '../constants';
 import { replaceNormalizedData } from "./dta";
 import {
     TRENDING_SCHEMA,
@@ -55,3 +55,5 @@ export const getMovies = (section) => ({
         name: 'get ' + section,
     },
 });
+
+export const getMovie = () => ({ type: GET_MOVIE })

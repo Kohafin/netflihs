@@ -22,7 +22,9 @@ export const SWITCH_TENANT = 'SWITCH_TENANT';
 
 // API
 export const API = 'API';
-export const DEVICE_API = 'DEVICE_API';
+
+// Util
+export const GET_MOVIE = 'GET_MOVIE';
 
 // UI
 export const START_NETWORK = 'START_NETWORK';
