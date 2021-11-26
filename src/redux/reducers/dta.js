@@ -1,12 +1,27 @@
-import { DELETE_DATA, REPLACE_DATA, SIGNED_OUT, UPDATE_DATA, UPDATE_NESTED, DELETE_ALL_DATA, SET_VALUE } from '../constants';
+import {
+    DELETE_DATA,
+    REPLACE_DATA,
+    SIGNED_OUT,
+    UPDATE_DATA,
+    UPDATE_NESTED,
+    DELETE_ALL_DATA,
+    SET_VALUE,
+    GET_MOVIE
+} from '../constants';
 import { set } from 'lodash/fp';
 
 const initialState = { };
+
+const selectRandomMovie = movies => {
+    return movies ? Object.values(movies)[Math.floor(Math.random() * Object.keys(movies).length - 1)] : {}
+}
 
 const reducer = (state = initialState, action) => {
     const { type, data, id } = (action.payload || {});
 
     switch (action.type) {
+        case GET_MOVIE:
+            return { ...state, movie: selectRandomMovie(state?.trending) }
         case UPDATE_DATA:
             return { ...state, [type]: Object.assign({}, state[type], data)};
 
