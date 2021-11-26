@@ -38,6 +38,7 @@ const Top = category => {
 }
 
 const Bar = styled.div`
+  z-index: 100;
   height: 70px;
   background: ${props => props.atTop ?
           'linear-gradient(to top, rgb(20, 20, 20, 0) 0, rgb(20, 20, 20) 100%)' :
