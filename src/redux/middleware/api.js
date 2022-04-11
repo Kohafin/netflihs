@@ -4,7 +4,7 @@ import { toastrSuccess, toastrError } from "../actions/toastr";
 import { startNetwork, endNetwork } from "../actions/ui";
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNGNiYTFmNWMwOTFkNGUzODU4OTViM2U2OWZhZWQ2NCIsInN1YiI6IjYxOGViMDk2MTBkYWQ2MDAyOGExZGNiYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Xffl76iGZLrUUKVP1oUhSYQTCO0Zdnw66dHNiSdJtQY'
+const API_KEY = process.env.REACT_APP_API_KEY
 const buildUrl = uri => BASE_URL + uri;
 const handleArrayOfSuccess = (array, dispatch, data) => {
     array
